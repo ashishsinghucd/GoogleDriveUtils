@@ -51,6 +51,10 @@ if __name__ == "__main__":
     file_id_path = sys.argv[1]
     output_path = sys.argv[2]
     token_path = sys.argv[3]
+    try:
+        no_of_process = sys.argv[4]
+    except IndexError:
+        no_of_process = 2
     file_id_df = pd.read_csv(file_id_path)
     token_path_list = [token_path] * file_id_df.shape[0]
 
